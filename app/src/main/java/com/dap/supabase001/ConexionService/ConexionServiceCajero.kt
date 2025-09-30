@@ -4,6 +4,7 @@ import com.dap.supabase001.model.ModelCajero
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.postgrest.Postgrest
 import io.github.jan.supabase.postgrest.from
+import kotlin.text.insert
 
 class ConexionServiceCajero {
     companion object{
@@ -18,6 +19,16 @@ class ConexionServiceCajero {
                 from("cajero").
                 select().
                 decodeList<ModelCajero>()
+        }
+
+        suspend fun insertaSupabase(data: ModelCajero){
+            //val city = City(name = "The Shire", countryId = 554)
+            val result =
+                supabase
+                    .from("cajero")
+                    .insert(data) {
+                select()
+            }.decodeSingle<ModelCajero>()
         }
     }
 }

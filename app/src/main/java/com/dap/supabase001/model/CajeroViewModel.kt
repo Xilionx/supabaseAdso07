@@ -15,4 +15,10 @@ class CajeroViewModel : ViewModel() {
         list.addAll(result)
         currentName.value = list
     }
+
+    fun addCajero( result: ModelCajero){
+        val list = currentName.value?:mutableListOf()
+        list.add(result)
+        currentName.value = list
+    }
 }
