@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nombreCajero"
+        android:textSize="16sp"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/tvApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apellidoCajero"
+        android:textSize="16sp"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/tvCaja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cajaCajero"
+        android:textSize="16sp"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/tvImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/imagenCajero"
+        android:textSize="16sp"
+        android:padding="5dp"/>
+
+</LinearLayout>
